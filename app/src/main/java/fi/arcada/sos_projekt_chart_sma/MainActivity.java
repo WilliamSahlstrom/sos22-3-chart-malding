@@ -19,11 +19,13 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     String currency, datefrom, dateto;
+    LineChart chart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        chart = (Linechart) findViewById(R.id.chart);
 
         // TEMPORÄRA VÄRDEN
         currency = "USD";
@@ -34,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Double> currencyValues = getCurrencyValues(currency, datefrom, dateto);
         // Skriv ut dem i konsolen
         System.out.println(currencyValues.toString());
+
+
+        ArrayList<Double> temperatures = Statistics.getDataValues();
+        System.out.println(temperatures);
+        ArrayList<Double> tempSma = Statistics.sma(temperatures, 3);
+        System.out.println(tempSma);
+
+        createChart(temperatures);
     }
 
 
@@ -61,4 +71,20 @@ public class MainActivity extends AppCompatActivity {
 
         return currencyData;
     }
+    public void createChart(ArrayList<Double> dataSet) {
+        List<Entry> entries = new ArrayList<Entry>();
+
+        for (Double val: dataSet) {
+            for (int i = 0; i < ; i++) {
+                entries.add(new Entry(i, dataSet.get(i).floatValue()));
+            }
+
+            LineDataSet lineDataSet = new LineDataSet(entries, "Temperatur");
+            lineData lineData = new lineData(lineDataSet);
+
+            chart.setData(lineData);
+            chart.invalidate();
+        }
+    }
+
 }
