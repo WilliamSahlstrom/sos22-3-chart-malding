@@ -2,6 +2,7 @@ package fi.arcada.sos_projekt_chart_sma;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -150,6 +151,14 @@ public class MainActivity extends AppCompatActivity {
         chart.setData(lineData);
         chart.invalidate(); // refresh
     }
+
+    public void openSettings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+
+
 
 
 }
