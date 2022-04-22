@@ -29,4 +29,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="74dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="buttonClick"
+        android:text="SMA3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="86dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="buttonClick"
+        android:text="SMA10"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/dFrom"
+        android:layout_width="104dp"
+        android:layout_height="23dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/dTo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/dTo"
+        app:layout_constraintTop_toBottomOf="@+id/dTo" />
+
+    <TextView
+        android:id="@+id/dTo"
+        android:layout_width="104dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="63dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="28dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dTo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

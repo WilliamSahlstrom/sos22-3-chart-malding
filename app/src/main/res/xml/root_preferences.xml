@@ -14,8 +14,8 @@
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="stonk"
-            app:title="Välj Valuta"
+            app:key="sma1"
+            app:title="Ställ in fönster 1"
             app:useSimpleSummaryProvider="true" />
 
 
@@ -28,11 +28,12 @@
             app:useSimpleSummaryProvider="true" /> -->
 
     </PreferenceCategory>
+
     <ListPreference
         android:defaultValue="1"
-        android:entries="@android:array/emailAddressTypes"
-        android:entryValues="@android:array/emailAddressTypes"
-        android:key="list_preference_1"
+        android:entries="@array/currency_values"
+        android:entryValues="@array/currency_values"
+        android:key="currencyChange"
         android:title="Välj Valuta" />
 
 
